@@ -1,0 +1,106 @@
+/* Section Styling */
+.about-section {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container Grid */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Text Styling */
+.about-text {
+  flex: 1 1 480px;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Image Styling */
+.about-image {
+  flex: 1 1 480px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-button {
+    width: 100%;
+    padding: 14px;
+  }
+}

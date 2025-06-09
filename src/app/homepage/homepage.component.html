@@ -1,0 +1,42 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1><span>Exclusive</span> Watches Collection</h1>
+    <p>Crafted to perfection, timeless elegance for the discerning few.</p>
+    <a routerLink="/products" class="btn-primary">Explore Now</a>
+  </div>
+</section>
+
+
+<section class="features">
+  <div class="feature">
+    <img src="https://cdn-icons-png.freepik.com/512/6831/6831000.png" alt="Free Shipping" />
+    <h3>Free Shipping</h3>
+    <p>Complimentary delivery on orders over $100 worldwide.</p>
+  </div>
+  <div class="feature">
+    <img src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="Warranty" />
+    <h3>5-Year Warranty</h3>
+    <p>Because quality lasts beyond expectations.</p>
+  </div>
+  <div class="feature">
+    <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Support" />
+    <h3>24/7 Concierge Support</h3>
+    <p>Dedicated experts ready to assist you anytime.</p>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="container">
+    <h2 class="section-title">Featured Rolex Watches</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts">
+        <a [routerLink]="['/product', product.id]" class="product-link">
+          <img [src]="product.image" [alt]="product.name" class="product-image" />
+          <h4 class="product-name">{{ product.name }}</h4>
+          <p class="price">${{ product.price | number:'1.2-2' }}</p>
+        </a>
+        <button (click)="addToCart(product)" class="add-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>

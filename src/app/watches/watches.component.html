@@ -1,0 +1,57 @@
+<div class="shop-container">
+  <!-- Left Sidebar Filters -->
+  <aside class="filters-sidebar">
+    <div class="filter-group">
+      <label>Sort By</label>
+      <select [(ngModel)]="sortOption" (change)="sortProducts()">
+        <option value="">Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name-asc">Name: A to Z</option>
+        <option value="name-desc">Name: Z to A</option>
+      </select>
+    </div>
+
+
+    <div class="filter-group">
+      <label>Availability</label>
+      <select [(ngModel)]="selectedAvailability" (change)="filterProducts()">
+        <option value="">All</option>
+        <option *ngFor="let avail of availabilityOptions" [value]="avail">{{ avail }}</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Category</label>
+      <select [(ngModel)]="selectedCategory" (change)="filterProducts()">
+        <option value="">All</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </div>
+
+    <!-- ფიქსირებული View Results ღილაკი -->
+    <button class="view-results-btn" (click)="onViewResults()">View Results</button>
+  </aside>
+
+  <!-- Main Product Grid -->
+  <main class="product-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <div class="product-image" [routerLink]="['/product', product.id]" style="position:relative;">
+        <img [src]="product.image" [alt]="product.name" loading="lazy" />
+        <div *ngIf="product.isNew" class="product-badge">New</div>
+      </div>
+      <div class="product-details">
+        <h2>{{ product.name }}</h2>
+        <span class="product-category">{{ product.category }}</span>
+        <div class="product-rating">
+          <span *ngFor="let star of [1,2,3,4,5]">
+            <i class="fa" [class.fa-star]="star <= product.rating" [class.fa-star-o]="star > product.rating"></i>
+          </span>
+        </div>
+        <p class="product-price">$ {{ product.price }}</p>
+        <p class="short-desc">{{ product.shortDescription }}</p>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+</div>

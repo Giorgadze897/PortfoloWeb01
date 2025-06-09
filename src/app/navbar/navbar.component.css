@@ -1,0 +1,155 @@
+/* ძირითადი სტილები */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Wrapper */
+nav .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* Logo */
+nav .logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+/* Desktop menu */
+nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav .menu a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+nav .menu a:hover {
+  color: #4f46e5;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.search-container input {
+  padding: 0.5rem 1.2rem;
+  width: 500px;
+  max-width: auto;
+  border-radius: 50px;
+  border: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  background-color: #fff;
+  outline: none;
+}
+
+/* Cart */
+.cart-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #eef2ff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-indicator:hover {
+  background-color: #e0e7ff;
+}
+
+.cart-count {
+  color: #4f46e5;
+}
+
+/* Login button */
+nav .login-btn {
+  background-color: #4f46e5;
+  color: #fff !important;
+  padding: 0.45rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav .login-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Mobile menu button */
+nav .mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobile-menu a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+  }
+
+  nav .mobile-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+}

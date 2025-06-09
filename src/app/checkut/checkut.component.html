@@ -1,0 +1,68 @@
+<div class="checkout-wrapper">
+  <div class="checkout-card">
+
+    <div class="checkout-body">
+      <section class="checkout-left">
+        <h2>Checkout</h2>
+
+        <div class="payment-methods">
+          <button class="active">Credit Card</button>
+          <button disabled>PayPal</button>
+          <button disabled>PayPal Credit</button>
+        </div>
+
+        <div class="card-logos">
+          <img src="https://img.icons8.com/color/48/visa.png" />
+          <img src="https://img.icons8.com/color/48/mastercard-logo.png" />
+          <img src="https://img.icons8.com/color/48/amex.png" />
+          <img src="https://img.icons8.com/color/48/discover.png" />
+        </div>
+
+        <form class="form" (ngSubmit)="placeOrder()">
+          <input type="text" placeholder="Cardholder Name" [(ngModel)]="payment.name" name="name" required />
+          <input type="text" placeholder="Card Number" [(ngModel)]="payment.cardNumber" name="cardNumber" required />
+          <div class="row">
+            <input type="text" placeholder="Exp. Date (MM/YY)" [(ngModel)]="payment.expDate" name="expDate" required />
+            <input type="text" placeholder="CVV" [(ngModel)]="payment.cvv" name="cvv" required />
+          </div>
+
+
+          <div class="form-buttons">
+            <button type="button" class="back" routerLink="/cart">Back</button>
+            <button type="submit" class="continue" routerLink="/">Continue</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RIGHT SIDE -->
+      <section class="checkout-right">
+        <h3>Order Summary</h3>
+        <div class="summary">
+          <div class="summary-line">
+            <span>Subtotal</span><span>${{ subtotal }}</span>
+          </div>
+          <div class="summary-line">
+            <span>Shipping (4–7 Days)</span><span>Free</span>
+          </div>
+          <div class="summary-line">
+            <span>Tax</span><span>${{ tax }}</span>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span><span>${{ total }}</span>
+          </div>
+        </div>
+
+        <div class="checkout-products">
+          <div class="product" *ngFor="let item of cartItems">
+            <img [src]="item.image || 'https://via.placeholder.com/50'" alt="product" />
+            <div class="info">
+              <p class="name">{{ item.name }}</p>
+              <p class="qty">x {{ item.quantity }}</p>
+            </div>
+            <p class="price">$ {{ item.price }}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

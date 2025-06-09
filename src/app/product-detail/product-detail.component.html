@@ -1,0 +1,28 @@
+<div class="product-detail-container" *ngIf="product">
+  <div class="image-gallery">
+    <img [src]="product.image" alt="{{ product.name }}" class="main-image" />
+  </div>
+
+  <div class="details">
+    <div class="header">
+      <h4 class="brand">CITIZEN</h4>
+      <h1 class="product-name">{{ product.name }}</h1>
+      <!-- Rating -->
+      <p class="rating">Rating: <span class="stars">{{ getRatingStars(product.rating) }}</span></p>
+      <p class="model">Model #{{ product.id }}</p>
+    </div>
+
+    <div class="specs">
+      <p><strong>MOVEMENT:</strong> Eco-Drive H504</p>
+      <p><strong>CASE SIZE:</strong> 43mm</p>
+      <p><strong>MATERIAL:</strong> Silver-tone Stainless Steel</p>
+    </div>
+
+    <div class="bottom-section">
+      <p class="price">${{ product.price }}</p>
+      <div class="buttons">
+        <button class="add-to-cart" (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

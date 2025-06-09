@@ -1,0 +1,139 @@
+.hero {
+  background: linear-gradient(to right, #1e3a8a, #9333ea);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: #facc15;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #facc15;
+  color: #1e1b4b;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #eab308;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 60px 20px;
+  background-color: #f3f4f6;
+  flex-wrap: wrap;
+}
+
+.feature {
+  max-width: 250px;
+  text-align: center;
+  margin: 20px;
+}
+
+.feature img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.products-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #4f46e5; /* იასამნისფერი */
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(78, 70, 229, 0.2); /* იასამნისფერი ჩრდილი */
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #42007f;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 32px rgba(79, 70, 229, 1.5);
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+}
+
+.product-name {
+  color: #1e3a8a; /* მუქი ლურჯი */
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.price {
+  color: #0ea5e9; /* ცისფერი */
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.add-btn {
+  background-color: #6366f1; /* იასამნისფერი */
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.add-btn:hover {
+  background-color: #4f46e5;
+  transform: scale(1.03);
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,164 @@
+.checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: #f4f9fa;
+}
+
+
+.checkout-card {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.checkout-header {
+  text-align: center;
+}
+
+.checkout-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.checkout-header nav span {
+  margin: 0 10px;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.checkout-header nav .active {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  opacity: 1;
+}
+
+.checkout-body {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.checkout-left {
+  flex: 1;
+}
+
+.checkout-right {
+  width: 350px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.payment-methods {
+  margin: 15px 0;
+}
+
+.payment-methods button {
+  margin-right: 10px;
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.payment-methods .active {
+  color: #0077f6;
+  border-bottom: 2px solid #0096e6;
+}
+
+.card-logos img {
+  height: 30px;
+  margin: 5px;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.billing-toggle label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.back {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.continue {
+  background: #007be6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.summary-line.total {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.checkout-products {
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.product img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product .info {
+  flex-grow: 1;
+}
+
+.product .name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.product .qty {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.product .price {
+  font-weight: bold;
+}

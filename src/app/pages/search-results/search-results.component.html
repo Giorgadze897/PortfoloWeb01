@@ -1,0 +1,37 @@
+<div class="results-container">
+  <h2 class="results-title">Search results for: "{{ searchTerm }}"</h2>
+
+  <div *ngIf="results.length > 0; else noResults">
+    
+    <!-- Single Result -->
+    <div *ngIf="results.length === 1; else multipleResults" class="single-result">
+      <div class="product-card modern-card">
+        <img [src]="results[0].image" [alt]="results[0].name" />
+        <div class="info">
+          <h3>{{ results[0].name }}</h3>
+          <p class="price">${{ results[0].price }}</p>
+          <button (click)="addToCart(results[0])" class="add-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multiple Results -->
+    <ng-template #multipleResults>
+      <div class="product-grid">
+        <div class="product-card modern-card" *ngFor="let product of results">
+          <img [src]="product.image" [alt]="product.name" />
+          <div class="info">
+            <h3>{{ product.name }}</h3>
+            <p class="price">${{ product.price }}</p>
+            <button (click)="addToCart(product)" class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </div>
+
+  <ng-template #noResults>
+    <p class="no-results">No products found. Try a different keyword.</p>
+  </ng-template>
+</div>
