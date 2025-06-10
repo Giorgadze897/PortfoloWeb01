@@ -162,3 +162,64 @@
 .product .price {
   font-weight: bold;
 }
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .checkout-body {
+    flex-direction: column;
+  }
+
+  .checkout-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .checkout-card {
+    padding: 20px;
+  }
+
+  .form input {
+    padding: 10px;
+  }
+
+  .continue, .back {
+    width: 48%;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Animations */
+.checkout-card {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.checkout-left,
+.checkout-right {
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.checkout-left {
+  animation-delay: 0.2s;
+}
+
+.checkout-right {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

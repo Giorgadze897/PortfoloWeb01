@@ -4,19 +4,13 @@
   --color-accent: #d4af37;
   --color-dark: #000;
   --color-light: #fff;
-  --font-primary: 'Inter', sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-body {
-  font-family: var(--font-primary);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .shop-container {
@@ -205,18 +199,18 @@ body {
   min-height: 40px;
 }
 
-.product-details button {
-  padding: 10px 20px;
-  background-color: var(--color-dark);
+.add-btn{
+  padding: 15px 50px;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s ease;
-}
-.product-details button:hover {
   background-color: #222;
+}
+.add-btn:hover {
+  background-color: #2F4F4F;
 }
 
 /* Responsive */
@@ -242,5 +236,65 @@ body {
   }
   .product-grid {
     width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .product-card {
+    animation: fadeInUp 0.6s ease both;
+  }
+
+  .product-details h2 {
+    font-size: 18px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .add-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  .filters-sidebar {
+    gap: 18px;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 16px 100px;
+    background-color: #fdfdfd;
+  }
+
+  .filter-group select {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* ლამაზი Fade-in ანიმაცია ბარათებისთვის */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Product image animate scale-in for smaller screens */
+@media (max-width: 480px) {
+  .product-image img {
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .product-card:hover .product-image img {
+    transform: scale(1.03);
+  }
+
+  .short-desc {
+    font-size: 13px;
   }
 }

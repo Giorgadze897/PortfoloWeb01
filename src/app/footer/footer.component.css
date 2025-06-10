@@ -1,9 +1,27 @@
+/* ფუნდამენტური სტრუქტურა */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+router-outlet {
+  flex: 1;
+}
+
+/* Footer Styling */
 .footer {
   background-color: #1e1e2f;
   color: #fff;
   padding: 40px 20px 20px;
   font-family: 'Segoe UI', sans-serif;
-  margin-top: 80px !important;
+  margin-top: auto;
 }
 
 .footer-container {
@@ -56,6 +74,7 @@
   color: #aaa;
 }
 
+/* Mobile responsive */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;

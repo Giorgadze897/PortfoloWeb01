@@ -1,32 +1,38 @@
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Left Section -->
-    <div class="footer-brand">
-      <h2>Timeless Watches</h2>
-      <p>Elegance. Precision. Style.</p>
+<div class="page-wrapper">
+  <!-- შენი კონტენტი აქ -->
+  <router-outlet></router-outlet>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-brand">
+        <h2>Timeless Watches</h2>
+        <p>Elegance. Precision. Style.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/watches">Watches</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>Email: support#timeless.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
     </div>
 
-    <!-- Navigation Links -->
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/watches">Watches</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+    <!-- Bottom Note -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Timeless Watches. All rights reserved.</p>
     </div>
-
-    <!-- Contact Info -->
-    <div class="footer-contact">
-      <h3>Contact</h3>
-      <p>Email: support#timeless.com</p>
-      <p>Phone: +1 (555) 123-4567</p>
-    </div>
-  </div>
-
-  <!-- Bottom Note -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 Timeless Watches. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
+</div>
