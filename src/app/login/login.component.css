@@ -121,3 +121,23 @@ button:not([disabled]):hover {
 .signup-prompt a:hover {
   text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-side-image {
+    display: none !important;
+  }
+
+  .login-form {
+    padding: 40px 20px;
+  }
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+}

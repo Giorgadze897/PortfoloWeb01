@@ -17,8 +17,8 @@
 
     <!-- Multiple Results -->
     <ng-template #multipleResults>
-      <div class="product-grid">
-        <div class="product-card modern-card" *ngFor="let product of results">
+      <div class="product-grid" >
+        <div class="product-card modern-card" *ngFor="let product of results"  [routerLink]="['/product', product.id]">
           <img [src]="product.image" [alt]="product.name" />
           <div class="info">
             <h3>{{ product.name }}</h3>

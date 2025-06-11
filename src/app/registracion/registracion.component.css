@@ -96,3 +96,14 @@ button:not([disabled]):hover {
 .login-prompt a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .signup-side-image {
+    display: none;
+  }
+
+  .signup-form {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+}
